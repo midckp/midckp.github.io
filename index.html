@@ -51,9 +51,9 @@
 
     <!--jumbotron-->
     <section class="jumbotron text-center">
-      <img src="img/midarno.png" alt="Midarno" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/midarno.png" alt="Midarno" width="200" class="rounded-circle img-thumbnail" data-aos="fade-down" data-aos-duration="1000" />
       <h1 class="display-4">Midarno</h1>
-      <p class="lead">Teacher | Content Creator</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -73,13 +73,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text text-center">
-          <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-offset="500">
+          <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="1000">
             <p>
               Merdeka Belajar, slogan yang dipinjam sebagai program kebijakan baru Kementerian Pendidikan dan Kebudayaan Republik Indonesia (Kemendikbud RI) dicanangkan oleh Menteri Pendidikan dan Kebudayaan RI Kabinet Indonesia Maju,
               Nadiem Anwar Makarim
             </p>
           </div>
-          <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-offset="600">
+          <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="1100">
             <p>
               "Merdeka Belajar" paling tepat digunakan sebagai filosofi perubahan dari metode pembelajaran yang terjadi selama ini. Sebab, dalam "Merdeka Belajar" terdapat kemandirian dan kemerdekaan bagi lingkungan pendidikan menentukan
               sendiri cara terbaik dalam proses pembelajaran.
@@ -110,7 +110,7 @@
             <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="50">
               <img src="img/projects/2.png" class="card-img-top" alt="1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Proyek IPA</p>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@
             <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/4.png" class="card-img-top" alt="1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Proyek IPS</p>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@
             <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/5.png" class="card-img-top" alt="1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Proyek Matematika</p>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@
             <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/1.png" class="card-img-top" alt="1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Proyek Bahasa Indonesia</p>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
             <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/7.png" class="card-img-top" alt="1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Proyek PKn</p>
               </div>
             </div>
           </div>
@@ -217,7 +217,13 @@
       AOS.init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Teacher | Content Creator" });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbx9BO_pn3_V1CmAoafwQslRtxRVd1M6U9zRiOp1DdsICCCBEgYvect8NvDS_2hYFsgD/exec";
